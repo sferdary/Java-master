@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ee722c-f2de-497a-b9e9-9a3d001b4833" name="Default Changelist" comment="Java opdrachten">
-      <change afterPath="$PROJECT_DIR$/../BestaandProject/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BestaandProject/src/Melding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EersteApplet/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EersteApplet/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../H4_Tekenen" beforeDir="false" afterPath="$PROJECT_DIR$/../H4_Tekenen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../H5_Variabelen" beforeDir="false" afterPath="$PROJECT_DIR$/../H5_Variabelen" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../inleiding-Java" beforeDir="false" afterPath="$PROJECT_DIR$/../inleiding-Java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
     </list>
@@ -30,28 +29,28 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="iml" value="3" />
-          <entry key="java" value="41" />
+          <entry key="java" value="42" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="3" />
-          <entry key="JAVA" value="41" />
+          <entry key="JAVA" value="42" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2317" />
+          <entry key="java" value="2333" />
           <entry key="txt" value="17" />
           <entry key="xml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2317" />
+          <entry key="JAVA" value="2333" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="XML" value="27" />
         </counts>
@@ -84,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/h06/Opdracht6_3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="459">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,11 +95,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/h08/Opdrach8_1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/h06/PraktijkOpdracht.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+            <state>
+              <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -155,7 +163,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="1358" />
     <option name="height" value="1057" />
@@ -183,13 +191,7 @@
               <item name="inleiding-java-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="inleiding-java-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="h01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inleiding-java-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inleiding-java-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="h06" type="462c0819:PsiDirectoryNode" />
+              <item name="h08" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="inleiding-java-master" type="b2602c69:ProjectViewProjectNode" />
@@ -206,7 +208,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536089359187" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536090971013" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -288,7 +290,7 @@
       <workItem from="1536052224771" duration="2082000" />
       <workItem from="1536057288333" duration="7485000" />
       <workItem from="1536065011025" duration="134000" />
-      <workItem from="1536067505347" duration="12793000" />
+      <workItem from="1536067505347" duration="13681000" />
     </task>
     <task id="LOCAL-00001" summary="Java opdrachten">
       <created>1536058247836</created>
@@ -322,13 +324,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22494000" />
+    <option name="totallyTimeSpent" value="23382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1358" height="1057" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25731894" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25731894" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -337,7 +338,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6167377" visible="true" weight="0.12026002" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6167377" visible="true" weight="0.12026002" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4995809" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -534,13 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/h06/PraktijkOpdracht.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/h06/Opdracht6_1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
@@ -561,13 +555,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/h06/PraktijkOpdracht.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/h06/Opdracht6_3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/h08/Opdrach8_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
