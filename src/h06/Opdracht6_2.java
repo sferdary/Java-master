@@ -40,6 +40,5 @@ public class Opdracht6_2 extends Applet {
         g.drawString("Jaar", 15, 100);
         g.drawString(Jaar + "", 80, 100);
         g.drawString("seconden", 150, 100);
-
     }
 }

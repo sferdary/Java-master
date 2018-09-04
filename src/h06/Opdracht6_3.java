@@ -9,7 +9,7 @@ public class Opdracht6_3 extends Applet {
     public void init() {
         setBackground(Color.white);
         GetalEen = 2147483647;
-        GetalTwee = 2147483647;
+        GetalTwee = 2147483526;
         Antwoord = GetalEen + GetalTwee;
     }
 
@@ -23,11 +23,11 @@ public class Opdracht6_3 extends Applet {
         g.drawString("Getal 2:", 15, 80 );
         g.drawString(GetalTwee + "", 80, 80 );
 
+        g.drawString("Totaal:", 15, 100 );
+        g.drawString(Antwoord + "", 80, 100 );
+
         //Horizontal lines
         g.drawLine(10,85,175,85);
         g.drawString("+", 170, 80 );
-
-        g.drawString("Totaal:", 15, 100 );
-        g.drawString(Antwoord + "", 80, 100 );
     }
 }
