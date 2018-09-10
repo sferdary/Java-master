@@ -15,10 +15,10 @@ public class PraktijkOpdracht extends Applet {
         CijferDrie = 6.9;
         AantalCijfers = 3 ;
 
-        AnsEen = ((CijferEen + CijferTwee + CijferDrie) / AantalCijfers) * 10;
-        Gemiddelde = (int) AnsEen ;
-        AnsTwee = (int) Gemiddelde;
-        Antwoord = AnsTwee / 10;
+        AnsEen = (((CijferEen + CijferTwee + CijferDrie) / AantalCijfers) * 10);
+        Gemiddelde = (int) AnsEen;
+        AnsTwee = Gemiddelde;
+        Antwoord = (AnsTwee / 10);
     }
 
     public void paint(Graphics g) {
