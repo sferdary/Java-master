@@ -12,43 +12,40 @@ public class PraktijkOpdracht extends Applet {
     Double TekstVak1Cijfers, TekstVak2Cijfers, CalcPlus1, CalcPlus2, CalcPlusTot, CalcMin1, CalcMin2, CalcMinTot, CalcKeer1, CalcKeer2, CalcKeerTot, CalcDelen1, CalcDelen2, CalcDelenTot;
 
     public void init() {
-        setSize(150, 150);
-        LabelCalculator = new Label("Calculator");
-        add(LabelCalculator);
-
-        TekstVak1 = new TextField("", 15);
-        TekstVak1.addActionListener(new TekstVak1Listener());
-        add(TekstVak1);
-
-        TekstVak2 = new TextField("", 15);
-        TekstVak2.addActionListener(new TekstVak2Listener());
-        add(TekstVak2);
-
-        KnopCalcPlus = new Button();
-        KnopCalcPlus.setLabel("+");
-        KnopCalcPlus.addActionListener(new KnopCalcPlusListener());
-        add(KnopCalcPlus);
-
-        KnopCalcMin = new Button();
-        KnopCalcMin.setLabel(" - ");
-        KnopCalcMin.addActionListener(new KnopCalcMinListener());
-        add(KnopCalcMin);
-
-        KnopCalcKeer = new Button();
-        KnopCalcKeer.setLabel(" * ");
-        KnopCalcKeer.addActionListener(new KnopCalcKeerListener());
-        add(KnopCalcKeer);
-
-        KnopCalcDelen = new Button();
-        KnopCalcDelen.setLabel(" / ");
-        KnopCalcDelen.addActionListener(new KnopCalcDelenListener());
-        add(KnopCalcDelen);
-
-        KnopReset = new Button();
-        KnopReset.setLabel("C");
-        KnopReset.addActionListener(new KnopResetListener());
-        add(KnopReset);
-    }
+            setSize(150, 150);
+            LabelCalculator = new Label("Calculator");
+            add(LabelCalculator);
+            TekstVak1 = new TextField("", 15);
+            TekstVak1.addActionListener(new TekstVak1Listener());
+            add(TekstVak1);
+            TekstVak2 = new TextField("", 15);
+            TekstVak2.addActionListener(new TekstVak2Listener());
+            add(TekstVak2);
+            KnopCalcPlus = new Button();
+            KnopCalcPlus.setLabel("+");
+            KnopCalcPlus.addActionListener(new KnopCalcPlusListener());
+            CalcPlusAns = "";
+            add(KnopCalcPlus);
+            KnopCalcMin = new Button();
+            KnopCalcMin.setLabel(" - ");
+            KnopCalcMin.addActionListener(new KnopCalcMinListener());
+            CalcMinAns = "";
+            add(KnopCalcMin);
+            KnopCalcKeer = new Button();
+            KnopCalcKeer.setLabel(" * ");
+            KnopCalcKeer.addActionListener(new KnopCalcKeerListener());
+            CalcKeerAns = "";
+            add(KnopCalcKeer);
+            KnopCalcDelen = new Button();
+            KnopCalcDelen.setLabel(" / ");
+            KnopCalcDelen.addActionListener(new KnopCalcDelenListener());
+            CalcDelenAns = "";
+            add(KnopCalcDelen);
+            KnopReset = new Button();
+            KnopReset.setLabel("C");
+            KnopReset.addActionListener(new KnopResetListener());
+            add(KnopReset);
+        }
 
     class TekstVak1Listener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
