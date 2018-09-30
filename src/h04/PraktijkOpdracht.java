@@ -6,6 +6,7 @@ import java.applet.*;
 public class PraktijkOpdracht extends Applet {
 
     public void init() {
+        setSize(650, 300);
         setBackground(Color.white);
     }
 

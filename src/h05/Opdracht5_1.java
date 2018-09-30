@@ -9,7 +9,8 @@ public class Opdracht5_1 extends Applet {
     int breedte = 200;
     int hoogte = 100;
 
-    public void init() {
+    public void init()
+    {
         setBackground(Color.white);
     }
 

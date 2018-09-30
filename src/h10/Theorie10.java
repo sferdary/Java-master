@@ -14,7 +14,7 @@ public class Theorie10 extends Applet {
     public void init() {
         setSize(350, 400);
 
-        labelLeeftijd = new Label("Geef uw leeftijd in en druk op enter" );
+        labelLeeftijd = new Label("Geef uw leeftijd in en druk op enter");
         tekstvakLeeftijd = new TextField("", 5);
         tekstvakLeeftijd.addActionListener( new TekstVakLeeftijdListener() );
 
