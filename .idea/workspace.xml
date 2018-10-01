@@ -63,14 +63,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="13668" />
+          <entry key="java" value="13752" />
           <entry key="txt" value="17" />
           <entry key="xml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13668" />
+          <entry key="JAVA" value="13752" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="XML" value="27" />
         </counts>
@@ -144,8 +144,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/h11/Opdracht11_3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -249,7 +249,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1353" />
     <option name="height" value="1057" />
@@ -300,7 +300,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538381421838" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538382988493" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -413,7 +413,7 @@
       <workItem from="1538116356662" duration="11308000" />
       <workItem from="1538167511575" duration="664000" />
       <workItem from="1538339618098" duration="9494000" />
-      <workItem from="1538378468851" duration="2924000" />
+      <workItem from="1538378468851" duration="3831000" />
     </task>
     <task id="LOCAL-00001" summary="Java opdrachten">
       <created>1536058247836</created>
@@ -503,7 +503,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144967000" />
+    <option name="totallyTimeSpent" value="145874000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,10 +515,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1353" height="1057" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15699923" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.108208954" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -527,7 +527,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.32893288" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4153132" visible="true" weight="0.17222223" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4067164" visible="true" weight="0.17051706" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49882352" weight="0.26444444" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -535,8 +535,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49960783" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32939914" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.58468676" side_tool="true" visible="true" weight="0.17222223" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.3712297" weight="0.21444444" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5932836" side_tool="true" visible="true" weight="0.17051706" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.36247334" weight="0.21342134" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2525773" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -869,8 +869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/h11/Opdracht11_3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
