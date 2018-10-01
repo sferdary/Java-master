@@ -49,28 +49,28 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="iml" value="3" />
-          <entry key="java" value="253" />
+          <entry key="java" value="254" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="3" />
-          <entry key="JAVA" value="253" />
+          <entry key="JAVA" value="254" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14905" />
+          <entry key="java" value="14962" />
           <entry key="txt" value="17" />
           <entry key="xml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14905" />
+          <entry key="JAVA" value="14962" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="XML" value="27" />
         </counts>
@@ -155,15 +155,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/h11/Opdracht11_6.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state>
+              <caret selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#204#205#0" expanded="true" />
                 <element signature="e#237#238#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/h11/Opdracht11_7.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -261,6 +275,7 @@
         <option value="$PROJECT_DIR$/src/h11/Opdracht11_4.java" />
         <option value="$PROJECT_DIR$/src/h11/Opdracht11_5.java" />
         <option value="$PROJECT_DIR$/src/h11/Opdracht11_6.java" />
+        <option value="$PROJECT_DIR$/src/h11/Opdracht11_7.java" />
       </list>
     </option>
   </component>
@@ -321,7 +336,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538388791940" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538389107734" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -338,16 +353,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Applet.Opdracht11_6">
+  <component name="RunManager" selected="Applet.Opdracht11_7">
     <configuration name="Opdracht11_2" type="Applet" factoryName="Applet" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="h11.Opdracht11_2" />
-      <module name="inleiding-java-master" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Opdracht11_3" type="Applet" factoryName="Applet" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="h11.Opdracht11_3" />
       <module name="inleiding-java-master" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -374,20 +382,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Opdracht11_7" type="Applet" factoryName="Applet" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="h11.Opdracht11_7" />
+      <module name="inleiding-java-master" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Applet.Opdracht11_2" />
-      <item itemvalue="Applet.Opdracht11_3" />
       <item itemvalue="Applet.Opdracht11_4" />
       <item itemvalue="Applet.Opdracht11_5" />
       <item itemvalue="Applet.Opdracht11_6" />
+      <item itemvalue="Applet.Opdracht11_7" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Applet.Opdracht11_7" />
         <item itemvalue="Applet.Opdracht11_6" />
         <item itemvalue="Applet.Opdracht11_5" />
         <item itemvalue="Applet.Opdracht11_2" />
         <item itemvalue="Applet.Opdracht11_4" />
-        <item itemvalue="Applet.Opdracht11_3" />
       </list>
     </recent_temporary>
   </component>
@@ -434,7 +449,7 @@
       <workItem from="1538116356662" duration="11308000" />
       <workItem from="1538167511575" duration="664000" />
       <workItem from="1538339618098" duration="9494000" />
-      <workItem from="1538378468851" duration="9624000" />
+      <workItem from="1538378468851" duration="9877000" />
     </task>
     <task id="LOCAL-00001" summary="Java opdrachten">
       <created>1536058247836</created>
@@ -531,7 +546,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151667000" />
+    <option name="totallyTimeSpent" value="151920000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,7 +570,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.32893288" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.32434514" visible="true" weight="0.17222223" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.3181818" visible="true" weight="0.17222223" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49882352" weight="0.26444444" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -563,8 +578,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49960783" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32939914" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6756548" side_tool="true" visible="true" weight="0.17222223" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.27272728" weight="0.21333334" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6818182" side_tool="true" visible="true" weight="0.17222223" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.26656395" weight="0.21333334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2525773" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -929,12 +944,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/h11/Opdracht11_6.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state>
+          <caret selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#204#205#0" expanded="true" />
             <element signature="e#237#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/h11/Opdracht11_7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
           </folding>
         </state>
       </provider>
