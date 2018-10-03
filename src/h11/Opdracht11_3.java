@@ -5,23 +5,26 @@ import java.awt.*;
 
 public class Opdracht11_3 extends Applet {
     Label labelHeader;
-    int intOne = 1, intTwo = 0;
-    int intTemp = 0;
-    int x = 10;
 
     public void init() {
-        setSize(350, 50);
+        setSize(350, 100);
+        setLayout(null);
+
         labelHeader = new Label("Fibonacci:");
+        labelHeader.setBounds(150, 10, 75, 25);
+
         add(labelHeader);
     }
 
     public void paint(Graphics g) {
+        int intOne = 1, intTwo = 0, intTemp = 0, x = 10;
         for (int i = 0; i < 13; i++) {
-            g.drawString(intOne + intTwo + " ", x, 40);
+            g.drawString(intOne + intTwo + " ", x, 60);
             x += 25;
             intTemp = intOne;
             intOne = intTwo;
             intTwo = intTemp + intTwo;
         }
+
     }
 }

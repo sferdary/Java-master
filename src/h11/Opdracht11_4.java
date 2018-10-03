@@ -5,10 +5,6 @@ import java.awt.*;
 
 public class Opdracht11_4 extends Applet {
     Label labelHeader = new Label("Tafel van 3:");
-    String stringPrint = "1 x 3";
-    int intOne = 3;
-    int intTemp = 3;
-    int y = 50;
 
     public void init() {
         setSize(100, 250);
@@ -19,6 +15,8 @@ public class Opdracht11_4 extends Applet {
 
 
     public void paint(Graphics g) {
+        String stringPrint = "1 x 3";
+        int intOne = 3, intTemp = 3, y = 50;
         for (int i = 2; i < 12; i++) {
             g.drawString(stringPrint + " = " + intTemp, 10, y);
             y += 20;
