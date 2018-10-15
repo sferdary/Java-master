@@ -13,7 +13,6 @@ public class Opdracht11_4 extends Applet {
         add(labelHeader);
     }
 
-
     public void paint(Graphics g) {
         String stringPrint = "1 x 3";
         int intOne = 3, intTemp = 3, y = 50;

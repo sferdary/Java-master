@@ -4,20 +4,17 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class Opdracht11_3 extends Applet {
-    Label labelHeader;
 
     public void init() {
         setSize(350, 100);
         setLayout(null);
-
-        labelHeader = new Label("Fibonacci:");
+        Label labelHeader= new Label("Fibonacci:");
         labelHeader.setBounds(150, 10, 75, 25);
-
         add(labelHeader);
     }
 
     public void paint(Graphics g) {
-        int intOne = 1, intTwo = 0, intTemp = 0, x = 10;
+        int intOne = 1, intTwo = 0, intTemp, x = 10;
         for (int i = 0; i < 13; i++) {
             g.drawString(intOne + intTwo + " ", x, 60);
             x += 25;
@@ -25,6 +22,5 @@ public class Opdracht11_3 extends Applet {
             intOne = intTwo;
             intTwo = intTemp + intTwo;
         }
-
     }
 }
