@@ -6,23 +6,34 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Opdracht12_02 extends Applet {
-    Button buttonTest[];
-
+    private String buttonText;
 
     public void init() {
-        buttonTest = new Button[25];
+        setSize(900,300);
+        Button[] buttonMain = new Button[25];
+        for (int i = 0; i < buttonMain.length; i++) {
+            Button buttonCopy = new Button("Button " + i);
+            buttonMain[i] = buttonCopy;
+            buttonCopy.addActionListener(new ButtonCopyListener());
+        }
 
-
+        for (Button aButtonMain : buttonMain) {
+            add(aButtonMain);
+        }
     }
 
-    class ButtonTestListener implements ActionListener{
+    class ButtonCopyListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-
+            Button buttonCopy = (Button) e.getSource();
+            buttonText = buttonCopy.getLabel();
+            repaint();
         }
     }
 
     public void paint(Graphics g) {
-
+        if (buttonText != null) {
+            g.drawString("You have pressed: " + buttonText, 375, 100);
+        }
 
     }
 }

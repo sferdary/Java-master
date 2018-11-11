@@ -19,12 +19,16 @@ public class Opdrachten4_2en3 extends Applet {
         g.drawRect(35, 100, 135, 100);
         g.drawRect(65, 150, 25, 50);
         g.drawRect(110, 150, 50, 25);
+
         g.setColor(Color.red);
         g.fillRect(225, 100, 50, 10);
+
         g.setColor(Color.white);
         g.fillRect(225, 110, 50, 10);
+
         g.setColor(Color.blue);
         g.fillRect(225, 120, 50, 10);
+
         g.setColor(Color.gray);
         g.fillRect(220, 100, 5, 100);
     }

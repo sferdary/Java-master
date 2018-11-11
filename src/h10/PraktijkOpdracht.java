@@ -6,29 +6,26 @@ import java.awt.event.*;
 import java.text.DecimalFormat;
 
 public class PraktijkOpdracht extends Applet {
-    Label labelHeader;
-    TextField textFieldNumber;
-    Button buttonOk;
-    String stringResult;
-    double doubleResult;
-    boolean clicked;
-    DecimalFormat Fmt;
-
+    private TextField textField;
+    private String stringResult;
+    private double doubleResult;
+    private boolean boolClicked = false;
+    private DecimalFormat Fmt;
 
     public void init() {
         setSize(235, 75);
         setLayout(null);
 
-        labelHeader = new Label("Voer cijfer in: ");
-        labelHeader.setBounds(10, 10, 75, 25);
-        add(labelHeader);
+        Label label = new Label("Insert grade: ");
+        label.setBounds(10, 10, 75, 25);
+        add(label);
 
-        textFieldNumber = new TextField("", 4);
-        textFieldNumber.addActionListener(new ButtonOkListener());
-        textFieldNumber.setBounds(95, 10, 40, 20);
-        add(textFieldNumber);
+        textField = new TextField("", 4);
+        textField.addActionListener(new ButtonOkListener());
+        textField.setBounds(95, 10, 40, 20);
+        add(textField);
 
-        buttonOk = new Button("Bereken");
+        Button buttonOk = new Button("Calculate");
         buttonOk.addActionListener(new ButtonOkListener());
         buttonOk.setBounds(150, 10, 75, 20);
         add(buttonOk);
@@ -37,43 +34,37 @@ public class PraktijkOpdracht extends Applet {
         Fmt = new DecimalFormat("#.#");
     }
 
-
-    public void paint(Graphics g) {
-        if (clicked) {
-            g.drawString("Cijfer " + Fmt.format(doubleResult) + " is " + stringResult, 10, 50);
-        }
-    }
-
-
     class ButtonOkListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            clicked = true;
-            doubleResult = Double.parseDouble(textFieldNumber.getText());
+            boolClicked = true;
+            doubleResult = Double.parseDouble(textField.getText());
 
             if (doubleResult > 0.0) {
-                stringResult = "slecht.";
+                stringResult = "bad.";
             }
             if (doubleResult > 3.999) {
-                stringResult = "onvoldoende.";
+                stringResult = "a failure.";
             }
             if (doubleResult > 4.999) {
-                stringResult = "matig.";
+                stringResult = "not enough.";
             }
             if (doubleResult > 5.999) {
-                stringResult = "voldoende";
+                stringResult = "mediocre";
             }
             if (doubleResult > 7.999) {
-                stringResult = "goed";
+                stringResult = "good";
             }
-            if (doubleResult > 10.0) {
-                stringResult = "ongeldig";
-            }
-            if (doubleResult < 0.0) {
-                stringResult = "ongeldig";
+            if ( doubleResult < 0.0|| doubleResult > 10.0) {
+                stringResult = "invalid";
             }
             repaint();
         }
     }
 
+    public void paint(Graphics g) {
+        if (boolClicked) {
+            g.drawString("An " + Fmt.format(doubleResult) + " is " + stringResult, 10, 50);
+        }
+    }
 }
 

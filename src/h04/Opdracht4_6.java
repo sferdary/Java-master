@@ -6,6 +6,7 @@ import java.applet.*;
 public class Opdracht4_6 extends Applet {
 
     public void init() {
+        setSize(125, 400);
         Color dark_blue = new Color(10, 30, 71);
         this.setBackground(dark_blue);
     }
@@ -15,8 +16,8 @@ public class Opdracht4_6 extends Applet {
         g.fillArc(10, 10, 100, 100, 0, 180);
         g.fillRect(11, 60, 99, 110);
         g.fillArc(10, 120, 100, 100, 180, 180);
-        g.drawLine(11,60,11,180);
-        g.drawLine(109,60,109,180);
+        g.drawLine(11, 60, 11, 180);
+        g.drawLine(109, 60, 109, 180);
 
         g.setColor(Color.red);
         g.fillOval(45, 65, 30, 30);
@@ -34,6 +35,6 @@ public class Opdracht4_6 extends Applet {
         g.drawOval(45, 135, 30, 30);
 
         g.setColor(Color.gray);
-        g.fillRect(55,220,10,150);
+        g.fillRect(55, 220, 10, 150);
     }
 }

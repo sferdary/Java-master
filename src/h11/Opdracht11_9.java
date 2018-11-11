@@ -11,35 +11,34 @@ public class Opdracht11_9 extends Applet {
     }
 
     public void paint(Graphics g) {
-        int x = 50, y = 50, breedte = 50, hoogte = 50;
+        int x = 50, y = 50, width = 50, height = 50;
 
-        for (int rij = 0; rij < 4; rij++) {
-            for (int kolom = 0; kolom < 8; kolom++) {
+        for (int row = 0; row < 4; row++) {
+            for (int colom = 0; colom < 8; colom++) {
 
-                if (kolom == 0 || kolom == 2 || kolom == 4 || kolom == 6) {
+                if (colom == 0 || colom == 2 || colom == 4 || colom == 6) {
                     g.setColor(Color.black);
-                    g.fillRect(x, y, breedte, hoogte);
+                    g.fillRect(x, y, width, height);
                 } else {
                     g.setColor(Color.white);
-                    g.fillRect(x, y, breedte, hoogte);
+                    g.fillRect(x, y, width, height);
                 }
-                x += breedte;
+                x += width;
             }
             x = 50;
-            y += hoogte;
-            for (int kolom = 0; kolom < 8; kolom++) {
-                if (kolom == 0 || kolom == 2 || kolom == 4 || kolom == 6) {
+            y += height;
+            for (int colom = 0; colom < 8; colom++) {
+                if (colom == 0 || colom == 2 || colom == 4 || colom == 6) {
                     g.setColor(Color.white);
-                    g.fillRect(x, y, breedte, hoogte);
+                    g.fillRect(x, y, width, height);
                 } else {
                     g.setColor(Color.black);
-                    g.fillRect(x, y, breedte, hoogte);
+                    g.fillRect(x, y, width, height);
                 }
-                x += breedte;
+                x += width;
             }
-            y += hoogte;
-            x = breedte;
+            y += height;
+            x = width;
         }
     }
 }
-

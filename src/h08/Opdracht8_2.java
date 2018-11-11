@@ -5,78 +5,108 @@ import java.applet.*;
 import java.awt.event.*;
 
 public class Opdracht8_2 extends Applet {
-    Label label = new Label("klik aantallen aan");
-    Button knopManBezoeker, knopManPotL, knopVrouwBezoeker, knopVrouwPotL;
-    int startManBNull, startManPNull, startVrouwBNull, startVrouwPNull, getalManB, getalManP, getalVrouwB, getalVrouwP;
+    Label label;
+    Button buttonMaleVisitor, buttonPotentialMaleStudent, buttonFemaleVisitor, buttonPotentialFemaleStudent, buttonReset;
+    int intCountMaleVisitor, intCounterPotentialMaleStudent, intCounterFemaleVisitor, intCounterPotentialFemaleStudent, intMaleVisitor, intPotentialMaleStudent, intFemaleVisitor, intPotentialFemaleStudent, intTotal;
 
     public void init() {
-        setSize(600, 175);
+        setSize(450, 180);
+        setLayout(null);
+
+        label = new Label("Count visitors and potential students:");
+        label.setFont(new Font("Arial", Font.BOLD, 20));
+        label.setBounds(10, 10, 400, 25);
         add(label);
-        knopManBezoeker = new Button();
-        knopManBezoeker.setLabel("Bezoeker Man");
-        knopManBezoeker.addActionListener(new knopManBezoekerListener());
-        startManBNull = 1;
-        add(knopManBezoeker);
 
-        knopManPotL = new Button();
-        knopManPotL.setLabel("Pot. leerling Man");
-        knopManPotL.addActionListener(new knopManPotLListener());
-        startManPNull = 1;
-        add(knopManPotL);
+        buttonMaleVisitor = new Button("Male visitors");
+        buttonMaleVisitor.setBounds(10, 50, 150, 30);
+        buttonMaleVisitor.addActionListener(new buttonMaleVisitorListener());
+        add(buttonMaleVisitor);
+        intMaleVisitor = 0;
+        intCountMaleVisitor = 1;
 
-        knopVrouwBezoeker = new Button();
-        knopVrouwBezoeker.setLabel("Bezoeker Vrouw");
-        knopVrouwBezoeker.addActionListener(new knopVrouwBezoekerListener());
-        startVrouwBNull = 1;
-        add(knopVrouwBezoeker);
+        buttonPotentialMaleStudent = new Button("Potential male students");
+        buttonPotentialMaleStudent.setBounds(10, 80, 150, 30);
+        buttonPotentialMaleStudent.addActionListener(new ButtonPotentialMaleStudentListener());
+        add(buttonPotentialMaleStudent);
+        intPotentialMaleStudent = 0;
+        intCounterPotentialMaleStudent = 1;
 
-        knopVrouwPotL = new Button();
-        knopVrouwPotL.setLabel("Pot. leerling Vrouw");
-        knopVrouwPotL.addActionListener(new knopVrouwPotLListener());
-        startVrouwPNull = 1;
-        add(knopVrouwPotL);
+        buttonFemaleVisitor = new Button("Female visitors");
+        buttonFemaleVisitor.setBounds(250, 50, 150, 30);
+        buttonFemaleVisitor.addActionListener(new ButtonFemaleVisitorListener());
+        add(buttonFemaleVisitor);
+        intFemaleVisitor = 0;
+        intCounterFemaleVisitor = 1;
+
+        buttonPotentialFemaleStudent = new Button("Potential female students");
+        buttonPotentialFemaleStudent.setBounds(250, 80, 150, 30);
+        buttonPotentialFemaleStudent.addActionListener(new ButtonPotentialFemaleStudentListener());
+        add(buttonPotentialFemaleStudent);
+        intPotentialFemaleStudent = 0;
+        intCounterPotentialFemaleStudent = 1;
+
+        buttonReset = new Button("Reset");
+        buttonReset.setBounds(350, 150, 50, 25);
+        buttonReset.addActionListener(new ButtonResetListener());
+        add(buttonReset);
     }
 
-    class knopManBezoekerListener implements ActionListener {
+    class buttonMaleVisitorListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            getalManB = startManBNull++;
+            intMaleVisitor = intCountMaleVisitor++;
             repaint();
         }
     }
 
-    class knopManPotLListener implements ActionListener {
+    class ButtonPotentialMaleStudentListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            getalManP = startManPNull++;
+            intPotentialMaleStudent = intCounterPotentialMaleStudent++;
+            intMaleVisitor = intCountMaleVisitor++;
             repaint();
         }
     }
 
-    class knopVrouwBezoekerListener implements ActionListener {
+    class ButtonFemaleVisitorListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            getalVrouwB = startVrouwBNull++;
+            intFemaleVisitor = intCounterFemaleVisitor++;
             repaint();
         }
     }
 
-    class knopVrouwPotLListener implements ActionListener {
+    class ButtonPotentialFemaleStudentListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            getalVrouwP = startVrouwPNull++;
+            intPotentialFemaleStudent = intCounterPotentialFemaleStudent++;
+            intFemaleVisitor = intCounterFemaleVisitor++;
+            repaint();
+        }
+    }
+
+    class ButtonResetListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            intTotal = 0;
+            intMaleVisitor = 0;
+            intCountMaleVisitor = 1;
+            intPotentialMaleStudent = 0;
+            intCounterPotentialMaleStudent = 1;
+
+            intFemaleVisitor = 0;
+            intCounterFemaleVisitor = 1;
+            intPotentialFemaleStudent = 0;
+            intCounterPotentialFemaleStudent = 1;
             repaint();
         }
     }
 
     public void paint(Graphics g) {
-        g.drawString("Aantal mannelijke:", 20, 95);
-        g.drawString("Bezoekers", 20, 115);
-        g.drawString(": " + getalManB, 150, 115);
-        g.drawString("Potentiële leerlingen", 20, 135);
-        g.drawString(": " + getalManP, 150, 135);
-        g.drawString("Aantal vrouwlijke:", 250, 95);
-        g.drawString("Bezoekers", 250, 115);
-        g.drawString(": " + getalVrouwB, 380, 115);
-        g.drawString("Potentiële leerlingen", 250, 135);
-        g.drawString(": " + getalVrouwP, 380, 135);
-        g.drawString("Totaal", 125, 190);
-        g.drawString(": " + (getalManB + getalManP + getalVrouwB + getalVrouwP) , 175, 190);
+        intTotal = intMaleVisitor + intFemaleVisitor;
+
+        g.drawString("" + intMaleVisitor, 170, 70);
+        g.drawString("" + intPotentialMaleStudent, 170, 100);
+
+        g.drawString("" + intFemaleVisitor, 410, 70);
+        g.drawString("" + intPotentialFemaleStudent, 410, 100);
+        g.setFont(new Font("Arial", Font.BOLD, 20));
+        g.drawString("Total: " + intTotal, 10, 170);
     }
 }

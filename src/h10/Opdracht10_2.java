@@ -5,34 +5,30 @@ import java.applet.*;
 import java.awt.event.*;
 
 public class Opdracht10_2 extends Applet {
-    Label labelTekstVak;
-    TextField tekstVak;
-    String sGetal;
-    Boolean geklikt;
-    int invoer, hoogsteGetal, laagsteGetal;
+    private TextField textField;
+    private Boolean boolClicked = false;
+    private int intHighestNumber = Integer.MIN_VALUE;
+    private int intLowestNumber = Integer.MAX_VALUE;
 
     public void init() {
         setSize(350, 150);
-        labelTekstVak = new Label("Voer getal in en druk op enter");
-        add(labelTekstVak);
-        tekstVak = new TextField("", 5);
-        tekstVak.addActionListener(new TekstVakListener());
-        add(tekstVak);
-
-        hoogsteGetal = Integer.MIN_VALUE;
-        laagsteGetal = Integer.MAX_VALUE;
+        Label label = new Label("Insert a number and press enter");
+        add(label);
+        textField = new TextField("", 5);
+        textField.addActionListener(new TekstVakListener());
+        add(textField);
     }
 
     class TekstVakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            geklikt = true;
-            sGetal = tekstVak.getText();
-            invoer = Integer.parseInt(sGetal);
-            if (invoer > hoogsteGetal) {
-                hoogsteGetal = invoer;
+            boolClicked = true;
+            String stringNumber = textField.getText();
+            int intInput = Integer.parseInt(stringNumber);
+            if (intInput > intHighestNumber) {
+                intHighestNumber = intInput;
             }
-            if (invoer < laagsteGetal) {
-                laagsteGetal = invoer;
+            if (intInput < intLowestNumber) {
+                intLowestNumber = intInput;
             }
 
             repaint();
@@ -40,9 +36,9 @@ public class Opdracht10_2 extends Applet {
     }
 
     public void paint(Graphics g) {
-        if (geklikt) {
-            g.drawString("Hoogste getal: " + hoogsteGetal, 10, 50);
-            g.drawString("Laagste getal: " + laagsteGetal, 10, 75);
+        if (boolClicked) {
+            g.drawString("Hoogste getal: " + intHighestNumber, 10, 50);
+            g.drawString("Laagste getal: " + intLowestNumber, 10, 75);
         }
     }
 }

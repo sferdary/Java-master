@@ -10,9 +10,9 @@ public class Opdracht11_5 extends Applet {
     }
 
     public void paint(Graphics g) {
-        int intSize = 20, x = 20, y = 20, w = intSize, h = intSize;
+        int intSize = 20, x = 20, y = 20;
         for (int i = 1; i < 6; i++) {
-            g.drawRect(x, y, w, h);
+            g.drawRect(x, y, intSize, intSize);
             y += intSize;
             x += intSize;
         }

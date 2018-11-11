@@ -6,13 +6,14 @@ import java.applet.*;
 public class Show extends Applet {
 
     public void init() {
+        setSize(175,100);
         Color dark_blue = new Color(10, 30, 71);
-        this.setBackground(dark_blue);
+        setBackground(dark_blue);
     }
 
     public void paint(Graphics g) {
         g.setColor(Color.white);
-        g.drawString("Eerste applet door:", 150, 50 );
-        g.drawString("Samuel Ferdary", 155, 75 );
+        g.drawString("First applet by:", 50, 40 );
+        g.drawString("Samuel Ferdary", 45, 65 );
     }
 }

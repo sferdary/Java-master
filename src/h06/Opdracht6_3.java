@@ -4,30 +4,34 @@ import java.awt.*;
 import java.applet.*;
 
 public class Opdracht6_3 extends Applet {
-    int GetalEen, GetalTwee, Antwoord;
+    int intOne, intTwo, Answer;
+    int xInt = 100;
+    int xAns = 145;
+    int xText = 15;
 
     public void init() {
+        setSize(200, 150);
         setBackground(Color.white);
-        GetalEen = 2147483647;
-        GetalTwee = 2147483526;
-        Antwoord = GetalEen + GetalTwee;
+        intOne = 2147483647;
+        intTwo = 2147483526;
+        Answer = intOne + intTwo;
     }
 
     public void paint(Graphics g) {
         g.setColor(Color.black);
-        g.drawString("Negatieve optelsom:", 10, 30 );
+        g.drawString("Negative answer:", xText, 30 );
 
-        g.drawString("Getal 1:", 15, 60 );
-        g.drawString(GetalEen + "", 80, 60 );
+        g.drawString("Integer one:", xText, 60 );
+        g.drawString(intOne + "", xInt, 60 );
 
-        g.drawString("Getal 2:", 15, 80 );
-        g.drawString(GetalTwee + "", 80, 80 );
+        g.drawString("Integer two:", xText, 80 );
+        g.drawString(intTwo + " +", xInt, 80 );
 
-        g.drawString("Totaal:", 15, 100 );
-        g.drawString(Antwoord + "", 80, 100 );
+        g.drawString("Answer:", xText, 100 );
+        g.drawString(Answer + "", xAns, 100 );
 
         //Horizontal lines
         g.drawLine(10,85,175,85);
-        g.drawString("+", 170, 80 );
+
     }
 }

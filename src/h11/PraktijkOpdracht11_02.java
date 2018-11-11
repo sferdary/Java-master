@@ -6,15 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PraktijkOpdracht11_02 extends Applet {
-    int intMultiplication;
-    boolean booleanClicked;
-    Button buttonNext;
+    private int intMultiplication;
+    private   boolean booleanClicked;
 
     public void init() {
         setSize(200, 250);
         setLayout(null);
 
-        buttonNext = new Button("Volgende");
+        Button buttonNext = new Button("Next");
         buttonNext.setBounds(100, 10, 75 , 25);
         buttonNext.addActionListener(new ButtonNextListener());
         add(buttonNext);
@@ -30,7 +29,7 @@ public class PraktijkOpdracht11_02 extends Applet {
 
     public void paint(Graphics g) {
         int intY = 40;
-        g.drawString("Tafel van ", 10, 25);
+        g.drawString("Table of ", 10, 25);
         if (booleanClicked) {
             g.drawString(intMultiplication + ":", 65, 25);
             for (int i = 1; i <= 10; i++) {

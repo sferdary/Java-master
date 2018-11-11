@@ -6,21 +6,18 @@ import java.awt.event.*;
 import java.text.DecimalFormat;
 
 public class Opdracht10_5 extends Applet {
-    Label labelHeader;
-    TextField textFieldOne, textFieldTwo, textFieldThree, textFieldFour, textFieldFive;
-    Button buttonOk;
-    String stringAverage, stringOne, stringTwo, stringThree, stringFour, stringFive;
-    double doubleAverage, doubleOne, doubleTwo, doubleThree, doubleFour, doubleFive;
-    DecimalFormat Fmt;
-
+    private TextField textFieldOne, textFieldTwo, textFieldThree, textFieldFour, textFieldFive;
+    private String stringAverage, stringOne, stringTwo, stringThree, stringFour, stringFive;
+    private double doubleAverage;
+    private DecimalFormat Fmt;
 
     public void init() {
         setSize(180, 250);
         setLayout(null);
 
-        labelHeader = new Label("Voer cijfers in: ");
-        labelHeader.setBounds(10, 10, 100, 25);
-        add(labelHeader);
+        Label label = new Label("Insert numbers ( 0 - 10 ): ");
+        label.setBounds(10, 10, 150, 25);
+        add(label);
 
         textFieldOne = new TextField("", 4);
         textFieldOne.addActionListener(new ButtonOkListener());
@@ -47,7 +44,7 @@ public class Opdracht10_5 extends Applet {
         textFieldFive.setBounds(10, 160, 40, 20);
         add(textFieldFive);
 
-        buttonOk = new Button("Ok");
+        Button buttonOk = new Button("Ok");
         buttonOk.addActionListener(new ButtonOkListener());
         buttonOk.setBounds(10, 220, 40, 20);
         add(buttonOk);
@@ -61,6 +58,53 @@ public class Opdracht10_5 extends Applet {
         Fmt = new DecimalFormat("#.##");
     }
 
+    class ButtonOkListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            double doubleOne = Double.parseDouble(textFieldOne.getText());
+            if (doubleOne < 5.5) {
+                stringOne = "Failed";
+            } else {
+                stringOne = "Passed";
+            }
+
+            double doubleTwo = Double.parseDouble(textFieldTwo.getText());
+            if (doubleTwo < 5.5) {
+                stringTwo = "Failed";
+            } else {
+                stringTwo = "Passed";
+            }
+
+            double doubleThree = Double.parseDouble(textFieldThree.getText());
+            if (doubleThree < 5.5) {
+                stringThree = "Failed";
+            } else {
+                stringThree = "Passed";
+            }
+
+            double doubleFour = Double.parseDouble(textFieldFour.getText());
+            if (doubleFour < 5.5) {
+                stringFour = "Failed";
+            } else {
+                stringFour = "Passed";
+            }
+
+            double doubleFive = Double.parseDouble(textFieldFive.getText());
+            if (doubleFive < 5.5) {
+                stringFive = "Failed";
+            } else {
+                stringFive = "Passed";
+            }
+
+            doubleAverage = ((doubleOne + doubleTwo + doubleThree + doubleFour + doubleFive) / 5.0);
+            stringAverage = Double.toString(doubleAverage);
+            if (doubleAverage < 5.5) {
+                stringAverage = "Failed";
+            } else {
+                stringAverage = "Passed";
+            }
+            repaint();
+        }
+    }
 
     public void paint(Graphics g) {
         g.drawString("" + stringOne, 100, 70);
@@ -68,55 +112,6 @@ public class Opdracht10_5 extends Applet {
         g.drawString("" + stringThree, 100, 120);
         g.drawString("" + stringFour, 100, 145);
         g.drawString("" + stringFive, 100, 170);
-        g.drawString("Gemiddeld: " + Fmt.format(doubleAverage) + "   " + stringAverage, 10, 200);
-    }
-
-
-    class ButtonOkListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            doubleOne = Double.parseDouble(textFieldOne.getText());
-            if (doubleOne < 5.5) {
-                stringOne = "Onvoldoende";
-            } else {
-                stringOne = "Voldoende";
-            }
-
-            doubleTwo = Double.parseDouble(textFieldTwo.getText());
-            if (doubleTwo < 5.5) {
-                stringTwo = "Onvoldoende";
-            } else {
-                stringTwo = "Voldoende";
-            }
-
-            doubleThree = Double.parseDouble(textFieldThree.getText());
-            if (doubleThree < 5.5) {
-                stringThree = "Onvoldoende";
-            } else {
-                stringThree = "Voldoende";
-            }
-
-            doubleFour = Double.parseDouble(textFieldFour.getText());
-            if (doubleFour < 5.5) {
-                stringFour = "Onvoldoende";
-            } else {
-                stringFour = "Voldoende";
-            }
-
-            doubleFive = Double.parseDouble(textFieldFive.getText());
-            if (doubleFive < 5.5) {
-                stringFive = "Onvoldoende";
-            } else {
-                stringFive = "Voldoende";
-            }
-
-            doubleAverage = ((doubleOne + doubleTwo + doubleThree + doubleFour + doubleFive) / 5.0);
-            stringAverage = Double.toString(doubleAverage);
-            if (doubleAverage < 5.5) {
-                stringAverage = "Onvoldoende";
-            } else {
-                stringAverage = "Voldoende";
-            }
-            repaint();
-        }
+        g.drawString("Average: " + Fmt.format(doubleAverage) + "   " + stringAverage, 10, 200);
     }
 }

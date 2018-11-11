@@ -5,93 +5,93 @@ import java.applet.Applet;
 import java.awt.event.*;
 
 public class Opdracht10_4 extends Applet {
-    Label labelMaand, labelJaar;
-    TextField tekstvakMaand, tekstvakJaar;
-    Button knopOk;
-    String sMaand, sJaar, sSchrikkel;
-    int iMaand, iJaar;
+    private TextField textFieldMonth, textFieldYear;
+    private String stringMonth="", stringLeap="";
 
     public void init() {
         setSize(300, 150);
-        labelMaand = new Label("Voer maandnummer in: ");
-        add(labelMaand);
-        tekstvakMaand = new TextField("", 5);
-        tekstvakMaand.addActionListener(new KnopOkListener());
-        add(tekstvakMaand);
-        sMaand = "";
+        setLayout(null);
 
-        labelJaar = new Label("Voer jaartal in: ");
-        add(labelJaar);
-        tekstvakJaar = new TextField("", 5);
-        tekstvakJaar.addActionListener(new KnopOkListener());
-        add(tekstvakJaar);
-        sJaar = "";
+        Label labelMonth = new Label("Insert month number: ");
+        labelMonth.setBounds(10, 10, 100, 25);
+        add(labelMonth);
+        textFieldMonth = new TextField("", 5);
+        textFieldMonth.addActionListener(new ButtonOkListener());
+        textFieldMonth.setBounds(150, 10, 100, 25);
+        add(textFieldMonth);
+        stringMonth = "";
 
-        knopOk = new Button();
-        knopOk.setLabel("Ok");
-        knopOk.addActionListener(new KnopOkListener());
-        add(knopOk);
+        Label labelYear = new Label("Insert Year: ");
+        labelYear.setBounds(10, 50, 100, 25);
+        add(labelYear);
+        textFieldYear = new TextField("", 5);
+        textFieldYear.addActionListener(new ButtonOkListener());
+        textFieldYear.setBounds(150, 50, 100, 25);
+        add(textFieldYear);
+
+        Button buttonOk = new Button();
+        buttonOk.setLabel("Ok");
+        buttonOk.addActionListener(new ButtonOkListener());
+        buttonOk.setBounds(10, 75, 100, 25);
+        add(buttonOk);
+    }
+
+    class ButtonOkListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            stringMonth = textFieldMonth.getText();
+            int intMonth = Integer.parseInt(stringMonth);
+            if (intMonth == 1) {
+                stringMonth = "January";
+
+            } else if (intMonth == 2) {
+                stringMonth = "February";
+
+            } else if (intMonth == 3) {
+                stringMonth = "March";
+
+            } else if (intMonth == 4) {
+                stringMonth = "April";
+
+            } else if (intMonth == 5) {
+                stringMonth = "May";
+
+            } else if (intMonth == 6) {
+                stringMonth = "June";
+
+            } else if (intMonth == 7) {
+                stringMonth = "July";
+
+            } else if (intMonth == 8) {
+                stringMonth = "August";
+
+            } else if (intMonth == 9) {
+                stringMonth = "September";
+
+            } else if (intMonth == 10) {
+                stringMonth = "October";
+
+            } else if (intMonth == 11) {
+                stringMonth = "November";
+
+            } else if (intMonth == 12) {
+                stringMonth = "December";
+
+            } else {
+                stringMonth = "Insert a number between 1 and 12.";
+            }
+            stringLeap = textFieldYear.getText();
+            int intYear = Integer.parseInt(stringLeap);
+            if ((intYear % 4 == 0 && !(intYear % 100 == 0)) || intYear % 400 == 0) {
+                stringLeap = (intYear + " is a leap year");
+            } else {
+                stringLeap = (intYear + " is not a leap year");
+            }
+            repaint();
+        }
     }
 
     public void paint(Graphics g) {
-        g.drawString("maand: " + sMaand, 15, 125);
-        g.drawString(sSchrikkel, 15, 145);
-    }
-
-    class KnopOkListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            sMaand = tekstvakMaand.getText();
-            iMaand = Integer.parseInt(sMaand);
-            switch (iMaand) {
-                case 1:
-                    sMaand = "januari";
-                    break;
-                case 2:
-                    sMaand = "februari";
-                    break;
-                case 3:
-                    sMaand = "maart";
-                    break;
-                case 4:
-                    sMaand = "april";
-                    break;
-                case 5:
-                    sMaand = "mei";
-                    break;
-                case 6:
-                    sMaand = "juni";
-                    break;
-                case 7:
-                    sMaand = "juli";
-                    break;
-                case 8:
-                    sMaand = "augustus";
-                    break;
-                case 9:
-                    sMaand = "september";
-                    break;
-                case 10:
-                    sMaand = "oktober";
-                    break;
-                case 11:
-                    sMaand = "november";
-                    break;
-                case 12:
-                    sMaand = "december";
-                    break;
-                default:
-                    sMaand = "Voer een getal tussen 1 en 12 in.";
-                    break;
-            }
-            sSchrikkel = tekstvakJaar.getText();
-            iJaar = Integer.parseInt(sSchrikkel);
-            if ((iJaar % 4 == 0 && !(iJaar % 100 == 0)) || iJaar % 400 == 0) {
-                sSchrikkel = "" + iJaar + " is een schrikkeljaar";
-            } else {
-                sSchrikkel = "" + iJaar + " is geen schrikkeljaar";
-            }
-
-            repaint();
-        }
+        g.drawString("Month: " + stringMonth, 15, 125);
+        g.drawString(stringLeap, 15, 145);
     }
 }

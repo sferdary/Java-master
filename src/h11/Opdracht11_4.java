@@ -4,13 +4,13 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class Opdracht11_4 extends Applet {
-    Label labelHeader = new Label("Tafel van 3:");
+    private Label label = new Label("Table of 3:");
 
     public void init() {
         setSize(100, 250);
         setLayout(null);
-        labelHeader.setBounds(8, 10, 75, 25);
-        add(labelHeader);
+        label.setBounds(8, 10, 75, 25);
+        add(label);
     }
 
     public void paint(Graphics g) {

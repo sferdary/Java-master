@@ -1,47 +1,37 @@
 package h10;
+
 import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
 
-public class Opdracht10_1  extends Applet
-{
-    Label labelTekstvak;
-    TextField tekstvak;
-    String sGetal, sPrintTekst;
-    int Getal1, Getal2, hoogsteGetal;
+public class Opdracht10_1 extends Applet {
+    private TextField textField;
+    private int intHighestNumber;
 
-    public void init()
-    {
-        setSize(350, 400);
+    public void init() {
+        setSize(350, 100);
 
-        labelTekstvak = new Label("Voer getal in en druk op enter");
-        tekstvak = new TextField("", 5);
-        tekstvak.addActionListener(new TekstVakListener());
+        Label label = new Label("Voer getal in en druk op enter");
+        add(label);
 
-        add(labelTekstvak);
-        add(tekstvak);
+        textField = new TextField("", 5);
+        textField.addActionListener(new TekstVakListener());
+        add(textField);
     }
 
-    class TekstVakListener implements ActionListener
-    {
-        public void actionPerformed(ActionEvent e)
-        {
-            sGetal = tekstvak.getText();
-            Getal1 = Integer.parseInt(sGetal);
-            Getal2 = hoogsteGetal;
-            if (Getal1 >= Getal2)
-            {
-                hoogsteGetal = Getal1;
+    class TekstVakListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            String stringNumber = textField.getText();
+            int intOne = Integer.parseInt(stringNumber);
+            int intTwo = intHighestNumber;
+            if (intOne >= intTwo) {
+                intHighestNumber = intOne;
             }
-            else
-                {
-                    Getal2 = hoogsteGetal;
-                }
             repaint();
         }
     }
-    public void paint(Graphics g)
-    {
-        g.drawString( "hoogste getal: " + hoogsteGetal, 10, 50);
+
+    public void paint(Graphics g) {
+        g.drawString("Highest number: " + intHighestNumber, 60, 50);
     }
 }

@@ -4,64 +4,65 @@ import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
 
-public class Opdrach8_1  extends Applet {
+public class Opdrach8_1 extends Applet {
     Label label;
-    TextField tekstvak;
-    Button knopOke;
-    Button knopCancel;
-    String reSet;
-    String invoer;
-    double getal;
+    TextField textField;
+    Button buttonOk;
+    Button buttonReset;
+    String stringReset;
+    String stringInput;
 
     public void init() {
-        setSize(200,300);
-        tekstvak = new TextField("", 20);
-        label = new Label("Insert text " + "and press 'enter'");
-        tekstvak.addActionListener(new TekstvakListener());
+        setSize(400, 300);
+        setLayout(null);
 
-        knopOke = new Button();
-        knopOke.setLabel( "Ok" );
-        knopOke.addActionListener( new KnopOkeListener() );
-        knopOke.setBounds(10, 30, 30, 60);
-        invoer = "hier moet de uitkomst komen";
-
-        knopCancel = new Button();
-        knopCancel.setLabel( "Cancel" );
-        knopCancel.addActionListener( new knopCancelListener() );
-        reSet = " ";
-
+        label = new Label("Insert text and press 'enter'");
+        label.setBounds(10,10,200,25);
         add(label);
-        add(tekstvak);
-        add(knopOke);
-        add(knopCancel);
+
+        textField = new TextField("", 50);
+        textField.setBounds(10,40,200,25);
+        textField.addActionListener(new TextFieldListener());
+        add(textField);
+
+        buttonOk = new Button("Insert");
+        buttonOk.addActionListener(new ButtonOkListener());
+        buttonOk.setBounds(250, 40, 50, 25);
+        add(buttonOk);
+        stringInput = "The answer wil be displayed here";
+
+        buttonReset = new Button("Reset");
+        buttonReset.setBounds(325,40,50,25);
+        buttonReset.addActionListener(new ButtonCancelListener());
+        add(buttonReset);
+        stringReset = "";
     }
 
-    class TekstvakListener implements ActionListener {
+    class TextFieldListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            getal = Double.parseDouble(tekstvak.getText());
+            stringInput = textField.getText();
             repaint();
         }
     }
 
 
-    class KnopOkeListener implements ActionListener {
-        public void actionPerformed( ActionEvent e ) {
-            invoer = tekstvak.getText();
+    class ButtonOkListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            stringInput = textField.getText();
             repaint();
         }
     }
 
-    class knopCancelListener implements ActionListener {
-        public void actionPerformed( ActionEvent e ) {
-            tekstvak.setText("");
-            invoer = "";
+    class ButtonCancelListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            textField.setText("");
+            stringInput = "";
             repaint();
         }
     }
 
-    public void paint(Graphics g){
-        g.drawLine(15,100,185,100);
-
-        g.drawString(invoer, 20, 115);
+    public void paint(Graphics g) {
+        g.drawLine(10, 80, 390, 80);
+        g.drawString(stringInput, 10, 115);
     }
 }

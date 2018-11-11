@@ -5,7 +5,7 @@ import java.awt.*;
 import java.util.Arrays;
 
 public class Theorie12 extends Applet {
-    double salaris[];
+    double[] salaris;
     double maximum;
     double gezocht;
     boolean gevonden;

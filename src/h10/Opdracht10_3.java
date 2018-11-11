@@ -5,79 +5,87 @@ import java.applet.Applet;
 import java.awt.event.*;
 
 public class Opdracht10_3 extends Applet {
-    Label labelInvoer;
-    TextField tekstvak;
-    Button knopOk;
-    String sMaand;
-    int iMaand;
-
+    private TextField textField;
+    private String stringMonth;
 
     public void init() {
         setSize(210, 100);
-        labelInvoer = new Label("Voer maandnummer in: ");
-        add(labelInvoer);
+        Label label = new Label("Insert month number: ");
+        add(label);
 
-        tekstvak = new TextField("", 5);
-        tekstvak.addActionListener(new KnopOkListener());
-        add(tekstvak);
+        textField = new TextField("", 5);
+        textField.addActionListener(new ButtonOkListener());
+        add(textField);
 
-        knopOk = new Button();
-        knopOk.setLabel("Ok");
-        knopOk.addActionListener(new KnopOkListener());
-        add(knopOk);
+        Button buttonOk = new Button();
+        buttonOk.setLabel("Ok");
+        buttonOk.addActionListener(new ButtonOkListener());
+        add(buttonOk);
 
-        sMaand = "";
+        stringMonth = "";
     }
 
     public void paint(Graphics g) {
-        g.drawString("Maand:", 15, 75);
-        g.drawString(sMaand, 15, 95);
+        g.drawString("Month:", 15, 75);
+        g.drawString(stringMonth, 15, 95);
     }
 
-
-    class KnopOkListener implements ActionListener {
+    class ButtonOkListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            sMaand = tekstvak.getText();
-            iMaand = Integer.parseInt(sMaand);
-            switch (iMaand) {
+            stringMonth = textField.getText();
+            int intMonth = Integer.parseInt(stringMonth);
+            switch (intMonth) {
                 case 1:
-                    sMaand = "januari";
+                    stringMonth = "January";
+
                     break;
                 case 2:
-                    sMaand = "februari";
+                    stringMonth = "February";
+
                     break;
                 case 3:
-                    sMaand = "maart";
+                    stringMonth = "March";
+
                     break;
                 case 4:
-                    sMaand = "april";
+                    stringMonth = "April";
+
                     break;
                 case 5:
-                    sMaand = "mei";
+                    stringMonth = "May";
+
                     break;
                 case 6:
-                    sMaand = "juni";
+                    stringMonth = "June";
+
                     break;
                 case 7:
-                    sMaand = "juli";
+                    stringMonth = "July";
+
                     break;
                 case 8:
-                    sMaand = "augustus";
+                    stringMonth = "August";
+
                     break;
                 case 9:
-                    sMaand = "september";
+                    stringMonth = "September";
+
                     break;
                 case 10:
-                    sMaand = "oktober";
+                    stringMonth = "October";
+
                     break;
                 case 11:
-                    sMaand = "november";
+                    stringMonth = "November";
+
                     break;
                 case 12:
-                    sMaand = "december";
+                    stringMonth = "December";
+
                     break;
                 default:
-                    sMaand = "Voer een getal tussen 1 en 12 in.";
+                    stringMonth = "Insert a number between 1 and 12.";
+
                     break;
             }
             repaint();
