@@ -4,19 +4,20 @@ import java.awt.*;
 import java.applet.*;
 
 public class Opdracht6_1 extends Applet {
-    int TotaalBedrag, AantalPersonen, DeelBedrag;
+    private  int intTotal;
+    private int intPart;
 
     public void init() {
         setBackground(Color.white);
-        TotaalBedrag = 113;
-        AantalPersonen = 4;
-        DeelBedrag = TotaalBedrag / AantalPersonen;
+        intTotal = 113;
+        int intPersons = 4;
+        intPart = intTotal / intPersons;
     }
 
     public void paint(Graphics g) {
         g.setColor(Color.black);
-        g.drawString("Geld verdeling:", 10, 30);
-        g.drawString("€ " + TotaalBedrag, 100, 30);
+        g.drawString("Share money equally:", 10, 20);
+        g.drawString("Total amount: € " + intTotal, 10, 35);
 
         //Vertical lines
         g.drawLine(10, 45, 10, 125);
@@ -31,15 +32,15 @@ public class Opdracht6_1 extends Applet {
         g.drawLine(10, 125, 140, 125);
 
         g.drawString("Ali", 15, 60);
-        g.drawString("€ " + DeelBedrag, 80, 60);
+        g.drawString("€ " + intPart, 80, 60);
 
         g.drawString("Jan", 15, 80);
-        g.drawString("€ " + DeelBedrag, 80, 80);
+        g.drawString("€ " + intPart, 80, 80);
 
         g.drawString("Jeannette", 15, 100);
-        g.drawString("€ " + DeelBedrag, 80, 100);
+        g.drawString("€ " + intPart, 80, 100);
 
         g.drawString("Samuel", 15, 120);
-        g.drawString("€ " + DeelBedrag, 80, 120);
+        g.drawString("€ " + intPart, 80, 120);
     }
 }

@@ -6,27 +6,25 @@ import java.awt.event.*;
 import java.text.DecimalFormat;
 
 public class Opdracht8_3 extends Applet {
-    Label label;
-    TextField textField;
-    Button buttonCalculate, buttonReset;
-    double doubleInput, doubleVAT ;
-    DecimalFormat Fmt = new DecimalFormat("#.##");
+    private TextField textField;
+    private double doubleInput, doubleVAT ;
+    private DecimalFormat Fmt = new DecimalFormat("#.##");
 
     public void init() {
         setSize(200,150);
-        
-        label = new Label("Price excl. 21% VAT");
+
+        Label label = new Label("Price excl. 21% VAT");
         add(label);
         
         textField = new TextField("", 20);
         textField.addActionListener(new TextFieldListener() );
         add(textField);
-        
-        buttonCalculate = new Button("Calculate" );
+
+        Button buttonCalculate = new Button("Calculate");
         buttonCalculate.addActionListener( new ButtonCalculateListener() );
         add(buttonCalculate);
-        
-        buttonReset = new Button("Reset" );
+
+        Button buttonReset = new Button("Reset");
         buttonReset.addActionListener( new ButtonResetListener() );
         add(buttonReset);
         

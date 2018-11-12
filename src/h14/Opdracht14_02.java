@@ -21,7 +21,7 @@ public class Opdracht14_02 extends Applet {
         int width = 500;
         setSize(width, 475);
         setLayout(null);
-        setBackground(Color.MAGENTA);
+        setBackground(Color.blue);
         setForeground(Color.white);
 
         URL urlSound = Opdracht14_02.class.getResource("/H14/Audio/");

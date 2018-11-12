@@ -127,7 +127,7 @@ public class PraktijkOpdracht_14 extends Applet {
         }
         g.drawString(stringPlayerTurn + stringNumberOfTokens + stringWordTokens, intX, 360);
         g.drawString("Rules:", 30, 420);
-        g.drawString("You win if the robot leave the last token.", 30, 440);
+        g.drawString("You win when the robot has one token left.", 30, 440);
         tokens(g);
     }
 
@@ -136,6 +136,7 @@ public class PraktijkOpdracht_14 extends Applet {
             intX = 90;
             intTokens = 23;
             stringWordTokens = " tokens ";
+            boolUserTurn = true;
             repaint();
         }
     }

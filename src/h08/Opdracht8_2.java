@@ -5,48 +5,46 @@ import java.applet.*;
 import java.awt.event.*;
 
 public class Opdracht8_2 extends Applet {
-    Label label;
-    Button buttonMaleVisitor, buttonPotentialMaleStudent, buttonFemaleVisitor, buttonPotentialFemaleStudent, buttonReset;
-    int intCountMaleVisitor, intCounterPotentialMaleStudent, intCounterFemaleVisitor, intCounterPotentialFemaleStudent, intMaleVisitor, intPotentialMaleStudent, intFemaleVisitor, intPotentialFemaleStudent, intTotal;
+    private int intCountMaleVisitor, intCounterPotentialMaleStudent, intCounterFemaleVisitor, intCounterPotentialFemaleStudent, intMaleVisitor, intPotentialMaleStudent, intFemaleVisitor, intPotentialFemaleStudent, intTotal;
 
     public void init() {
         setSize(450, 180);
         setLayout(null);
 
-        label = new Label("Count visitors and potential students:");
+        Label label = new Label("Count visitors and potential students:");
         label.setFont(new Font("Arial", Font.BOLD, 20));
         label.setBounds(10, 10, 400, 25);
         add(label);
 
-        buttonMaleVisitor = new Button("Male visitors");
+        Button buttonMaleVisitor = new Button("Male visitors");
         buttonMaleVisitor.setBounds(10, 50, 150, 30);
         buttonMaleVisitor.addActionListener(new buttonMaleVisitorListener());
         add(buttonMaleVisitor);
         intMaleVisitor = 0;
         intCountMaleVisitor = 1;
 
-        buttonPotentialMaleStudent = new Button("Potential male students");
+        Button buttonPotentialMaleStudent = new Button("Potential male students");
         buttonPotentialMaleStudent.setBounds(10, 80, 150, 30);
         buttonPotentialMaleStudent.addActionListener(new ButtonPotentialMaleStudentListener());
         add(buttonPotentialMaleStudent);
         intPotentialMaleStudent = 0;
         intCounterPotentialMaleStudent = 1;
 
-        buttonFemaleVisitor = new Button("Female visitors");
+        Button buttonFemaleVisitor = new Button("Female visitors");
         buttonFemaleVisitor.setBounds(250, 50, 150, 30);
         buttonFemaleVisitor.addActionListener(new ButtonFemaleVisitorListener());
         add(buttonFemaleVisitor);
         intFemaleVisitor = 0;
         intCounterFemaleVisitor = 1;
 
-        buttonPotentialFemaleStudent = new Button("Potential female students");
+        Button buttonPotentialFemaleStudent = new Button("Potential female students");
         buttonPotentialFemaleStudent.setBounds(250, 80, 150, 30);
         buttonPotentialFemaleStudent.addActionListener(new ButtonPotentialFemaleStudentListener());
         add(buttonPotentialFemaleStudent);
         intPotentialFemaleStudent = 0;
         intCounterPotentialFemaleStudent = 1;
 
-        buttonReset = new Button("Reset");
+        Button buttonReset = new Button("Reset");
         buttonReset.setBounds(350, 150, 50, 25);
         buttonReset.addActionListener(new ButtonResetListener());
         add(buttonReset);

@@ -5,37 +5,32 @@ import java.applet.*;
 import java.awt.event.*;
 
 public class Opdrach8_1 extends Applet {
-    Label label;
-    TextField textField;
-    Button buttonOk;
-    Button buttonReset;
-    String stringReset;
-    String stringInput;
+    private TextField textField;
+    private String stringInput;
 
     public void init() {
         setSize(400, 300);
         setLayout(null);
 
-        label = new Label("Insert text and press 'enter'");
-        label.setBounds(10,10,200,25);
+        Label label = new Label("Insert text and press 'enter'");
+        label.setBounds(10, 10, 200, 25);
         add(label);
 
         textField = new TextField("", 50);
-        textField.setBounds(10,40,200,25);
+        textField.setBounds(10, 40, 200, 25);
         textField.addActionListener(new TextFieldListener());
         add(textField);
 
-        buttonOk = new Button("Insert");
+        Button buttonOk = new Button("Insert");
         buttonOk.addActionListener(new ButtonOkListener());
         buttonOk.setBounds(250, 40, 50, 25);
         add(buttonOk);
         stringInput = "The answer wil be displayed here";
 
-        buttonReset = new Button("Reset");
-        buttonReset.setBounds(325,40,50,25);
+        Button buttonReset = new Button("Reset");
+        buttonReset.setBounds(325, 40, 50, 25);
         buttonReset.addActionListener(new ButtonCancelListener());
         add(buttonReset);
-        stringReset = "";
     }
 
     class TextFieldListener implements ActionListener {
@@ -44,7 +39,6 @@ public class Opdrach8_1 extends Applet {
             repaint();
         }
     }
-
 
     class ButtonOkListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {

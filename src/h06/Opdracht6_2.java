@@ -4,14 +4,14 @@ import java.awt.*;
 import java.applet.*;
 
 public class Opdracht6_2 extends Applet {
-    int Seconds, Hour, Day, Year;
+    private int Hour, Day, Year;
 
     public void init() {
         setBackground(Color.white);
-        Seconds = 1;
-        Hour = Seconds * 3600;
+        int seconds = 1;
+        Hour = seconds * 3600;
         Day = Hour * 24;
-        Year = Day *365;
+        Year = Day * 365;
     }
 
     public void paint(Graphics g) {

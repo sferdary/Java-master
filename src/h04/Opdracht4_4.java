@@ -4,16 +4,13 @@ import java.awt.*;
 import java.applet.*;
 
 public class Opdracht4_4 extends Applet {
-    int xNames = 55;
-    int yNames = 175;
-    int xWeight = 10;
 
     public void init() {
         setBackground(Color.white);
     }
 
     public void paint(Graphics g) {
-
+        int xWeight = 10;
         g.drawString("100 kg", xWeight, 50);
         g.drawString("80 kg", xWeight, 70);
         g.drawString("60 kg", xWeight, 90);
@@ -29,6 +26,8 @@ public class Opdracht4_4 extends Applet {
 
         int yValerie = (150 - weightValerie);
         g.setColor(Color.black);
+        int xNames = 55;
+        int yNames = 175;
         g.drawString("Valerie", (xNames + 1), yNames);
         g.setColor(Color.red);
         g.fillRect(51, yValerie, 50, weightValerie);
